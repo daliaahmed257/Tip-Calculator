@@ -231,4 +231,9 @@ h1 {
     .tip-btns>input {
         font-size: .8rem;
     }
+
+    .reset-btn {
+        margin-top: 40px;
+        height: 40px;
+    }
 }

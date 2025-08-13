@@ -1,4 +1,4 @@
-# Frontend Mentor - Tip calculator app solution
+# Tip calculator app solution
 
 This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX).
 
@@ -13,13 +13,11 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Calculate the correct tip and total cost of the bill per person
 
-### Screenshot
-
 ![Design preview for the Tip calculator app coding challenge](./preview.jpg)
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [live site URL here](https://splitterbilltip.netlify.app/)
 
 ### Built with
 

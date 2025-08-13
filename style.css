@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: hsl(172, 67%, 45%);
+    --secondary: hsl(183, 100%, 15%);
+    --background: #C5E4E7;
+    /* neutrals */
+    --Grey500: hsl(186, 14%, 43%);
+    --Grey400: hsl(184, 14%, 56%);
+    --Grey200: hsl(185, 41%, 84%);
+    --Grey50: hsl(189, 47%, 97%);
+    --Grey500: hsl(186, 14%, 43%);
+    --White: hsl(0, 100%, 100%);
+}
+
+body {
+    background-color: var(--background);
+    font-family: "Space Mono", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    background-color: var(--White);
+    border-radius: 16px;
+    max-width: 900px;
+    width: calc(100% - 64px);
+    gap: 32px;
+    padding: 32px;
+    margin: 32px;
+}
+
+/* LEFT SIDE BILL FORM */
+
+.full-bill-form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 50%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label,
+.tip-label {
+    color: var(--Grey500);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+input {
+    text-align: right;
+    border: none;
+    background-color: var(--Grey50);
+    padding: 8px;
+    color: var(--secondary);
+    font-size: 24px;
+    font-weight: 700;
+    font-family: "Space Mono", sans-serif;
+    border-radius: 8px;
+}
+
+.bill-form>input {
+    background: url('./images/icon-dollar.svg') no-repeat;
+    background-position: 8px center;
+    background-color: var(--Grey50);
+}
+
+.num-ppl-form>input {
+    background: url('./images/icon-person.svg') no-repeat;
+    background-position: 8px center;
+    background-color: var(--Grey50);
+}
+
+.tip-btns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 16px;
+}
+
+.tip-btns>input {
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.tip-btns button {
+    font-size: 1.5rem;
+    font-family: "Space Mono", sans-serif;
+    height: 48px;
+    background-color: var(--secondary);
+    border: none;
+    color: var(--White);
+    border-radius: 4px;
+    width: 100%;
+}
+
+
+/* RIGHT SIDE BILL AMOUNT */
+
+.bill-sum {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 32px;
+    background-color: var(--secondary);
+    border-radius: 16px;
+    width: 50%;
+}
+
+.amounts {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.bill-sum p:first-child {
+    color: var(--White);
+    font-weight: 700;
+}
+
+.bill-sum p:last-child {
+    color: var(--Grey400);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+h1 {
+    color: var(--primary);
+    font-size: 6vmin;
+}
+
+.reset-btn {
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-weight: 700;
+    font-family: "Space Mono", sans-serif;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    height: 6vmin;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 855px) {
+
+    .tip-btns button,
+    .tip-btns>input {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 790px) {
+    .total {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .amounts {
+        gap: 32px;
+    }
+
+}
+
+@media (max-width: 660px) {
+    .tip-btns {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .tip-btns button,
+    .tip-btns>input {
+        font-size: .8rem;
+    }
+
+}
+
+@media (max-width: 460px) {
+    main {
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .tip-btns {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .bill-sum {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .bill-form {
+        width: 100%;
+    }
+
+    .full-bill-form {
+        width: 100%;
+    }
+
+    .tip-btns button,
+    .tip-btns>input {
+        font-size: .8rem;
+    }
+}

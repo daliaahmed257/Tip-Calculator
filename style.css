@@ -15,6 +15,7 @@
     --Grey50: hsl(189, 47%, 97%);
     --Grey500: hsl(186, 14%, 43%);
     --White: hsl(0, 100%, 100%);
+    --hover: hsl(183, 100%, 4%);
 }
 
 body {
@@ -24,6 +25,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+button:hover, .tip-btn:hover {
+    background-color: var(--hover);
+    color: var(--White);
+    cursor: pointer;
 }
 
 main {

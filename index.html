@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./style.css" />
+  <script src="./main.js" defer></script>
   <title>Tip calculator app</title>
 
 </head>
@@ -21,24 +22,24 @@
     <div class="full-bill-form">
       <form class="bill-form">
         <label for="bill">Bill</label>
-        <input type="text" id="bill" name:="bill" value="142.55">
+        <input type="text" id="bill" name="bill" placeholder="00.00">
       </form>
 
       <div class="tip-select">
         <p class="tip-label">Select Tip %</p>
         <div class="tip-btns">
-          <button class="tip-btn">15%</button>
-          <button class="tip-btn">18%</button>
-          <button class="tip-btn">20%</button>
-          <button class="tip-btn">22%</button>
-          <button class="tip-btn">25%</button>
-          <input type="text" name:="custom-tip" value="Custom">
+          <button class="tip-btn" value=".15">15%</button>
+          <button class="tip-btn" value=".18">18%</button>
+          <button class="tip-btn" value=".2">20%</button>
+          <button class="tip-btn" value=".22">22%</button>
+          <button class="tip-btn" value=".25">25%</button>
+          <input type="text" id="custom-tip" name="custom-tip" placeholder="Custom">
         </div>
       </div>
 
       <form class="num-ppl-form">
         <label for="people">Number of People</label>
-        <input type="text" id="people" name:="people" value="5">
+        <input type="text" id="people" name="people" placeholder="0">
       </form>
 
     </div>

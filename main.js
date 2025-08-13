@@ -1,10 +1,11 @@
 
 const billInput = document.getElementById('bill');
 const tips = document.querySelectorAll('.tip-btn');
-const customTip = document.getElementById('custom-tip')
-const peopleInput = document.getElementById('people')
-const tipDisplay = document.querySelector('.tip-amount-num')
-const totalDisplay = document.querySelector('.total-num')
+const customTip = document.getElementById('custom-tip');
+const peopleInput = document.getElementById('people');
+const tipDisplay = document.querySelector('.tip-amount-num');
+const totalDisplay = document.querySelector('.total-num');
+const resetBtn = document.querySelector('.reset-btn')
 
 // Get bill input amount
 let billAmount = 0;
@@ -27,7 +28,6 @@ tips.forEach((tip) => {
 })
 
 customTip.addEventListener('input', (event) => {
-    console.log(event.target.value);
     tipAmount = parseFloat(event.target.value) / 100;
     if (isNaN(tipAmount) || tipAmount < 0) tipAmount = 0;
     getTipTotal();
@@ -78,3 +78,17 @@ const getBillPerPerson = () => {
     
     totalDisplay.innerHTML = '$' + billPerPerson.toFixed(2)
 }
+
+//reset everthing back to zero
+resetBtn.addEventListener('click', () => {
+    billAmount = 0;
+    billInput.value = ''
+    tipAmount = 0;
+    numPeople = 1;
+    peopleInput.value = ''
+    tipDisplay.innerHTML = '$'
+    totalDisplay.innerHTML = '$'
+    console.log('tip:' + tipAmount);
+    console.log('bill:' + billAmount);
+    console.log('people:' + numPeople);
+})
